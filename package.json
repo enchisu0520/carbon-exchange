@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "flag-icons": "^6.7.0",
+    "flowbite": "^1.6.5",
+    "flowbite-vue": "^0.0.12",
     "vue": "^3.2.47",
     "vue-i18n": "^9.2.2"
   },
