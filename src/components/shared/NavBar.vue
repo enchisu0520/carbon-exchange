@@ -120,7 +120,7 @@
                             >
                                 <span
                                     :class="`fi mr-2 ${
-                                        lang === 'en' ? 'fi-gb' : 'fi-tw'
+                                        $i18n.locale === 'en' ? 'fi-gb' : 'fi-tw'
                                     }`"
                                 ></span>
                                 <div class="ml-2 text-gray-400">
@@ -830,18 +830,18 @@
                     <ul v-if="showLanguages">
                         <hr class="border-2 border-gray-100 my-4" />
                         <button
-                            @click="loadLanguageAsync('en')"
+                            @click="$i18n.locale = 'en'"
                             class="w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                         >
-                            🇬🇧
+                            EN
                             <span class="ml-3">English</span>
                         </button>
                         <button
-                            @click="loadLanguageAsync('de')"
+                            @click="$i18n.locale = 'tw'"
                             class="w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                         >
-                            🇩🇪
-                            <span class="ml-3">Deutsch</span>
+                            TW
+                            <span class="ml-3">Mandarin</span>
                         </button>
                     </ul>
                 </li>
