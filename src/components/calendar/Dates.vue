@@ -84,7 +84,7 @@ function generateDatesForThatMonth(m = dayjs().month(), y = dayjs().year()) {
             day: d.date(i).day()
         })
     }
-    console.log('dates', dates.value)
+    // console.log('dates', dates.value)
 }
 
 function selected(d) {
