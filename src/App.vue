@@ -7,6 +7,9 @@
             <IntroVideo />
         </div>
     </div>
+	<div class="mt-20">
+        <NewsRelease />
+    </div>
 	<div class="sticky top-[100vh] w-full">
 		<CarbonFooter />
 	</div>
@@ -17,6 +20,7 @@ import NavBar from './components/shared/NavBar.vue'
 import BackgroundCarousel from './components/home/BackgroundCarousel.vue'
 import HighlightCards from './components/home/HighlightCards.vue'
 import IntroVideo from './components/home/IntroVideo.vue'
+import NewsRelease from './components/home/NewsRelease.vue'
 import CarbonFooter from './components/shared/CarbonFooter.vue'
 
 </script>
