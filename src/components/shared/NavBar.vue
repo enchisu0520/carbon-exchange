@@ -22,7 +22,7 @@
                             >
                                 <span
                                     class="text-gray-200 hover:text-yellow-400 focus:text-yellow-400"
-                                    >About TCE</span
+                                    >{{$t('navbar.about.us')}}</span
                                 >
                                 <div class="ml-2 text-gray-400">
                                     <Icon icon="arrow-down" size="sm" />
@@ -70,7 +70,7 @@
                             >
                                 <span
                                     class="text-gray-200 hover:text-yellow-400 focus:text-yellow-400"
-                                    >Related Sites</span
+                                    >{{$t('navbar.related.sites')}}</span
                                 >
                                 <div class="ml-2 text-gray-400">
                                     <Icon icon="arrow-down" size="sm" />
@@ -176,7 +176,7 @@
                             <a
                                 href="#"
                                 class="rounded-t-lg text-white relative block py-3 lg:px-6 lg:p-3 text-sm lg:text-base font-bold hover:bg-teal-700 hover:text-white"
-                                >Our Products</a
+                                >{{$t('navbar.header.products')}}</a
                             >
                             <div
                                 class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-teal-700"
@@ -212,7 +212,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Tatooine
+                                                {{ $t('navbar.menu.products.carbon.platform') }}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -254,7 +254,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Cantonica
+                                                {{ $t('navbar.menu.products.carbon.watch') }}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -296,7 +296,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Yavin 4
+                                                {{ $t('navbar.menu.products.energy.watch') }}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -338,7 +338,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Alderaan
+                                                {{ $t('navbar.menu.products.sustainable.finder') }}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -370,15 +370,15 @@
                         <!--end Hoverable Link-->
                         <!--Hoverable Link-->
                         <li
-                            class="rounded-t-lg hoverable hover:bg-orange-700 hover:text-white"
+                            class="rounded-t-lg hoverable hover:bg-yellow-600 hover:text-white"
                         >
                             <a
                                 href="#"
-                                class="rounded-t-lg text-white relative block py-3 lg:px-6 lg:p-3 text-sm lg:text-base font-bold hover:bg-orange-700 hover:text-white"
-                                >Our Services</a
+                                class="rounded-t-lg text-white relative block py-3 lg:px-6 lg:p-3 text-sm lg:text-base font-bold hover:bg-yellow-600 hover:text-white"
+                                >{{$t('navbar.header.services')}}</a
                             >
                             <div
-                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-orange-700"
+                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-yellow-600"
                             >
                                 <div
                                     class="container mx-auto w-full flex flex-wrap justify-between mx-2"
@@ -411,7 +411,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Tatooine
+                                                {{$t('navbar.menu.services.education.platform')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -453,7 +453,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Cantonica
+                                                {{$t('navbar.menu.services.certification.platform')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -495,7 +495,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Yavin 4
+                                                {{$t('navbar.menu.services.trade.consult')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -537,7 +537,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Alderaan
+                                                {{$t('navbar.menu.services.measure.consult')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -574,7 +574,7 @@
                             <a
                                 href="#"
                                 class="rounded-t-lg text-white relative block py-3 lg:px-6 lg:p-3 text-sm lg:text-base font-bold hover:bg-gray-500 hover:text-white"
-                                >Join Our Markets</a
+                                >{{$t('navbar.header.join')}}</a
                             >
                             <div
                                 class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-500"
@@ -610,7 +610,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Tatooine
+                                                {{$t('navbar.menu.join.carbon.trade')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -652,7 +652,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Cantonica
+                                                {{$t('navbar.menu.join.carbon.provider')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -694,7 +694,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Yavin 4
+                                                {{$t('navbar.menu.join.carbon.certification')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
@@ -736,7 +736,7 @@
                                             <h3
                                                 class="font-bold text-xl text-white text-bold mb-2"
                                             >
-                                                Alderaan
+                                                {{$t('navbar.menu.join.us')}}
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
