@@ -7,7 +7,7 @@
             <IntroVideo />
         </div>
     </div>
-	<div class="mt-20">
+	<div class="mt-[30vh]">
         <NewsRelease />
     </div>
 	<div class="sticky top-[100vh] w-full">
