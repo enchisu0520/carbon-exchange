@@ -10,7 +10,7 @@
             >
                 <span
                     class="self-center text-xl font-semibold whitespace-nowrap text-white transition-colors"
-                    >Taiwan Carbon Exchange</span
+                    >Carbon Exchange</span
                 >
             </inertia-link>
             <div class="flex flex-col">
