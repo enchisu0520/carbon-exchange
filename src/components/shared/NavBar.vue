@@ -219,10 +219,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{ $t('navbar.menu.products.carbon.platform.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -261,10 +258,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{ $t('navbar.menu.products.carbon.watch.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -303,10 +297,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{ $t('navbar.menu.products.energy.watch.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -345,10 +336,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{ $t('navbar.menu.products.energy.watch.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -418,10 +406,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.services.education.platform.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -461,10 +446,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.services.certification.platform.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -503,10 +485,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.services.trade.consult.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -545,10 +524,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.services.measure.consult.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -618,10 +594,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.join.carbon.trade.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -660,10 +633,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.join.carbon.provider.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -702,10 +672,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.join.carbon.certification.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
@@ -744,10 +711,7 @@
                                             </h3>
                                         </div>
                                         <p class="text-gray-100 text-sm">
-                                            Thul klivian doldur thisspiasian
-                                            calrissian. Garindan d8 aurra
-                                            twi'lek tund polis gen'dai sola
-                                            tarpals.
+                                            {{$t('navbar.menu.join.us.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
