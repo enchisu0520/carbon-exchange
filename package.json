@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
@@ -14,6 +16,7 @@
     "flag-icons": "^6.7.0",
     "flowbite": "^1.6.5",
     "flowbite-vue": "^0.0.12",
+    "gh-pages": "^5.0.0",
     "sass": "^1.63.3",
     "vue": "^3.2.47",
     "vue-i18n": "^9.2.2",
