@@ -4,15 +4,16 @@
         :class="{ fixed: currentUrl === '/' }"
     >
         <div class="container mx-auto flex justify-between">
-            <inertia-link
-                href="/about"
-                class="flex items-center md:hover:text-purple-700"
+            <router-link
+                to="/"
+                class="flex items-center"
             >
                 <span
-                    class="self-center text-xl font-semibold whitespace-nowrap text-white transition-colors"
-                    >Carbon Exchange</span
+                    class="font-sans self-center text-xl font-semibold whitespace-nowrap text-white transition-colors"
+                    >
+                    Carbon Exchange</span
                 >
-            </inertia-link>
+            </router-link>
             <div class="flex flex-col">
                 <nav class="flex justify-end">
                     <Dropdown>
@@ -430,11 +431,12 @@
                                                     d="M20 10a10 10 0 1 1-20 0 10 10 0 0 1 20 0zm-2 0a8 8 0 1 0-16 0 8 8 0 0 0 16 0zm-8 2H5V8h5V5l5 5-5 5v-3z"
                                                 />
                                             </svg>
-                                            <a
-                                                href="#"
+                                            <router-link
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                to="/class-search"
                                             >
+                                                Find out more...
+                                            </router-link>
                                         </div>
                                     </ul>
                                     <ul
