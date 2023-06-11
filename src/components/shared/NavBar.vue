@@ -2,7 +2,7 @@
     <nav
         class="px-4 backdrop-filter backdrop-blur-[8px] bg-opacity-10 sticky sm:px-6 md:px-32 lg:px-32 dark:bg-gray-900 w-full z-50 top-0 dark:border-gray-600"
         :class="{ 
-            'bg-yellow-950 bg-opacity-100': currentUrl !== '/',
+            'bg-yellow-950 bg-opacity-60': currentUrl !== '/',
         }"
     >
         <div class="container mx-auto flex justify-between">
@@ -863,7 +863,7 @@ import Icon from '../Icon.vue'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()
-let currentUrl = ref("")
+let currentUrl = ref("/")
 
 onMounted(() => {
     initDrawers()
