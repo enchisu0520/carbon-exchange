@@ -3,7 +3,7 @@
         class="container relative flex flex-col justify-between max-w-6xl px-10 mx-auto xl:px-0 mt-5"
     >
         <h2 class="mb-10 text-3xl font-extrabold leading-tight text-white">
-            Latest Events
+            {{ $t("latest.events") }}
         </h2>
         <div class="w-full">
             <div class="flex flex-row mb-10">

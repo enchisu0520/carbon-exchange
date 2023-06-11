@@ -3,7 +3,7 @@
         <div
             class="mb-2 text-white text-lg font-bold"
         >
-            Market Overview
+            {{ $t("market.overview") }}
         </div>
         <table class="min-w-full divide-y-2 divide-gray-200 text-xs">
             <thead class="ltr:text-left rtl:text-right text-xs">
@@ -11,27 +11,27 @@
                     <th
                         class="whitespace-nowrap px-4 py-2 font-medium text-white"
                     >
-                        Name
+                        {{ $t("market.name") }}
                     </th>
                     <th
                         class="whitespace-nowrap px-4 py-2 font-medium text-white"
                     >
-                        Index
+                        {{ $t("market.index") }}
                     </th>
                     <th
                         class="whitespace-nowrap px-4 py-2 font-medium text-white"
                     >
-                        Open
+                        {{ $t("market.open") }}
                     </th>
                     <th
                         class="whitespace-nowrap px-4 py-2 font-medium text-white"
                     >
-                        High
+                        {{ $t("market.high") }}
                     </th>
                     <th
                         class="whitespace-nowrap px-4 py-2 font-medium text-white"
                     >
-                        Low
+                        {{ $t("market.low") }}
                     </th>
                 </tr>
             </thead>

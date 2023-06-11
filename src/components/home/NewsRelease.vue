@@ -3,7 +3,7 @@
         class="container relative flex flex-col justify-between max-w-6xl px-10 mx-auto xl:px-0 mt-5"
     >
         <h2 class="mb-5 text-3xl font-extrabold leading-tight text-white">
-            News Release
+            {{ $t("news.release") }}
         </h2>
         <div class="w-full">
             <div class="flex flex-row mb-10">

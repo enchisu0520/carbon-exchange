@@ -51,14 +51,14 @@
                                     <a
                                         class="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:text-purple transition-all cursor-pointer"
                                     >
-                                        About TCE
+                                        {{ $t("about.carbon.exchange") }}
                                     </a>
                                 </li>
                                 <li>
                                     <a
                                         class="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:text-purple transition-all cursor-pointer"
                                     >
-                                        Investor Relation
+                                        {{ $t("investor.relation") }}
                                     </a>
                                 </li>
                             </ul>
@@ -189,12 +189,12 @@
                                         class="w-full text-white mb-8 text-center"
                                     >
                                         <h2 class="font-bold text-2xl">
-                                            Listen, why don’t you wait out by
-                                            the speeder.
+                                            {{ $t("navbar.header.product.title") }}
                                         </h2>
-                                        <p>
-                                            our droids. They’ll have to wait
-                                            outside. We don’t want them here.
+                                        <p
+                                            class="text-lg mt-2"
+                                        >
+                                            {{ $t("navbar.header.product.message") }}
                                         </p>
                                     </div>
                                     <ul
@@ -235,7 +235,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -277,7 +277,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -319,7 +319,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -361,7 +361,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -388,12 +388,12 @@
                                         class="w-full text-white mb-8 text-center"
                                     >
                                         <h2 class="font-bold text-2xl">
-                                            Listen, why don’t you wait out by
-                                            the speeder.
+                                            {{ $t("navbar.header.service.title") }}
                                         </h2>
-                                        <p>
-                                            our droids. They’ll have to wait
-                                            outside. We don’t want them here.
+                                        <p
+                                            class="text-lg mt-2"
+                                        >
+                                            {{ $t("navbar.header.service.message") }}
                                         </p>
                                     </div>
                                     <ul
@@ -435,7 +435,7 @@
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
                                                 to="/class-search"
                                             >
-                                                Find out more...
+                                                {{ $t("find.more") }}
                                             </router-link>
                                         </div>
                                     </ul>
@@ -477,7 +477,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -519,7 +519,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -561,7 +561,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -588,12 +588,12 @@
                                         class="w-full text-white mb-8 text-center"
                                     >
                                         <h2 class="font-bold text-2xl">
-                                            Listen, why don’t you wait out by
-                                            the speeder.
+                                            {{ $t("navbar.header.join.title") }}
                                         </h2>
-                                        <p>
-                                            our droids. They’ll have to wait
-                                            outside. We don’t want them here.
+                                        <p
+                                            class="text-lg mt-2"
+                                        >
+                                            {{ $t("navbar.header.join.message") }}
                                         </p>
                                     </div>
                                     <ul
@@ -634,7 +634,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -676,7 +676,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -718,7 +718,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
@@ -760,7 +760,7 @@
                                             <a
                                                 href="#"
                                                 class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
-                                                >Find out more...</a
+                                                >{{ $t("find.more") }}</a
                                             >
                                         </div>
                                     </ul>
