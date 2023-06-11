@@ -1,7 +1,7 @@
 <template>
     <nav
         class="px-4 backdrop-filter backdrop-blur-[8px] bg-opacity-10 sticky sm:px-6 md:px-32 lg:px-32 dark:bg-gray-900 w-full z-50 top-0 dark:border-gray-600"
-        :class="{ fixed: currentUrl === '/' }"
+        :class="{ 'bg-yellow-950': currentUrl !== '/' }"
     >
         <div class="container mx-auto flex justify-between">
             <router-link
@@ -22,7 +22,7 @@
                                 class="hidden md:inline-flex font-medium rounded-lg text-sm px-4 py-1.5 text-center items-center focus:text-yellow-400 hover:text-yellow-400 focus:outline-white focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all"
                             >
                                 <span
-                                    class="text-gray-200 hover:text-yellow-400 focus:text-yellow-400"
+                                    class="text-white hover:text-yellow-400 focus:text-yellow-400"
                                     >{{$t('navbar.about.us')}}</span
                                 >
                                 <div class="ml-2 text-gray-400">
@@ -70,7 +70,7 @@
                                 class="hidden md:inline-flex font-medium rounded-lg text-sm px-4 py-1.5 text-center items-center hover:text-yellow-400 focus:text-yellow-400 focus:outline-white focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all"
                             >
                                 <span
-                                    class="text-gray-200 hover:text-yellow-400 focus:text-yellow-400"
+                                    class="text-white hover:text-yellow-400 focus:text-yellow-400"
                                     >{{$t('navbar.related.sites')}}</span
                                 >
                                 <div class="ml-2 text-gray-400">
@@ -858,12 +858,18 @@ import { Dropdown } from 'flowbite-vue'
 import { initDrawers } from 'flowbite'
 import '/node_modules/flag-icons/css/flag-icons.min.css'
 import Icon from '../Icon.vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
+let currentUrl = ref("")
 
 onMounted(() => {
     initDrawers()
 })
 
+watch(() => route.path, (newPath, oldPath) => {
+    currentUrl.value = newPath;
+});
 
 let showLanguages = ref(false)
 
