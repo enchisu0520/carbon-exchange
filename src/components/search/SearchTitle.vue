@@ -1,0 +1,226 @@
+<template>
+    <div class="w-5/6 container mx-auto flex flex-wrap pt-6 pb-1">
+        <div id="searchResultsFilter" class="my-12 bg-white">
+            <div class="text-3xl mb-8 flex font-bold">
+                {{ $t("class.search.header1") }}
+                <div class="text-red-500 mx-2">{{ $t("class.search.header2") }}</div>
+                {{ $t("class.search.header3") }}
+            </div>
+            <p class="text-base">
+                {{ $t("class.search.subheader") }}
+            </p>
+        </div>
+        <nav
+            class="flex text-sm font-medium mb-3 justify-between w-full"
+            :class="{
+                'w-full lg:px-28 sm:pl-20 left-0 z-10 fixed top-0 mt-0 bg-white shadow-md h-14 align-middle':
+                    showFrozenTitle
+            }"
+        >
+            <span class="flex">
+                <!-- Language Filter -->
+                <button
+                    id="langFilterButton"
+                    data-dropdown-toggle="langFilter"
+                    data-dropdown-trigger="hover"
+                    class="flex font-medium rounded-full text-sm text-black px-4 py-3 mr-3 text-center items-center focus:bg-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all bg-gray-100"
+                    :class="{
+                        'my-1.5': showFrozenTitle
+                    }"
+                    type="button"
+                >
+                    {{ filterLang }}
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        aria-hidden="true"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                        ></path>
+                    </svg>
+                </button>
+                <div
+                    id="langFilter"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                    <ul class="py-2 text-sm text-gray-700 dark:text-gray-200">
+                        <li>
+                            <a
+                                @click="changeFilterLang('English')"
+                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:text-purple transition-all cursor-pointer"
+                            >
+                                English
+                            </a>
+                        </li>
+                        <li>
+                            <a
+                                @click="changeFilterLang('Deutsch')"
+                                class="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:text-purple transition-all cursor-pointer"
+                            >
+                                Deutsch
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Rating Filter -->
+                <button
+                    id="ratingFilterButton"
+                    data-dropdown-toggle="ratingFilter"
+                    data-dropdown-trigger="hover"
+                    class="flex font-medium rounded-full text-sm text-black px-4 py-3 mr-3 text-center items-center focus:bg-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all bg-gray-100"
+                    :class="{
+                        'my-1.5': showFrozenTitle
+                    }"
+                    type="button"
+                >
+                    Ratings
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        aria-hidden="true"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                        ></path>
+                    </svg>
+                </button>
+                <div
+                    id="ratingFilter"
+                    class="z-10 hidden bg-white divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                >
+                    <div class="text-sm mx-5 mt-4 flex">
+                        <span class="mr-3">Min Rating: </span>
+                        <span>{{ filterMinRating }}</span>
+                    </div>
+                    <star-rating
+                        value="3"
+                        @minRating="handleMinRatingFilter"
+                    ></star-rating>
+                </div>
+
+                <!-- Price Filter -->
+                <button
+                    id="lessonPriceFilterButton"
+                    data-dropdown-toggle="lessonPriceFilter"
+                    data-dropdown-trigger="hover"
+                    class="flex font-medium rounded-full text-sm text-black px-4 py-3 mr-3 text-center items-center focus:bg-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all bg-gray-100"
+                    :class="{
+                        'my-1.5': showFrozenTitle
+                    }"
+                    type="button"
+                >
+                    Lesson price
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        aria-hidden="true"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                        ></path>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div
+                    id="lessonPriceFilter"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 p-4"
+                >
+                    <PriceFilter />
+                </div>
+            </span>
+            <div
+                id="searchFilter"
+                :class="{
+                    'my-1.5': showFrozenTitle
+                }"
+            >
+                <SearchFilter />
+            </div>
+        </nav>
+    </div>
+</template>
+<script>
+import { defineComponent, ref, onMounted, onUnmounted, toRefs } from 'vue'
+import { Dropdown } from 'flowbite-vue'
+import PriceFilter from './PriceFilter.vue'
+import SearchFilter from './SearchFilter.vue'
+import StarRating from './StarRating.vue'
+
+export default defineComponent({
+    props: {
+        selectedLang: String
+    },
+    components: {
+        Dropdown,
+        StarRating,
+        PriceFilter,
+        SearchFilter
+    },
+    setup(props, { emit }) {
+        const { selectedLang } = toRefs(props)
+        let showFrozenTitle = ref(false)
+        let filterLang = ref('English')
+        let filterMinRating = ref(null)
+        const limitPosition = -32
+
+        const changeFilterLang = lang => {
+            filterLang.value = lang
+            emit('selectedLang', lang)
+        }
+
+        const handleMinRatingFilter = minRating => {
+            filterMinRating.value = minRating
+            emit('ratingFilter', minRating)
+        }
+
+        const handleNavBarScroll = () => {
+            let navBarToTop = document
+                .querySelector('#searchResultsFilter')
+                .getBoundingClientRect().bottom
+
+            if (limitPosition > navBarToTop) {
+                showFrozenTitle.value = true
+            } else {
+                showFrozenTitle.value = false
+            }
+        }
+
+        onMounted(() => {
+            window.addEventListener('scroll', handleNavBarScroll, true)
+        })
+
+        onUnmounted(() => {
+            window.removeEventListener('scroll', handleNavBarScroll, true)
+        })
+
+        return {
+            showFrozenTitle,
+            filterLang,
+            filterMinRating,
+            selectedLang,
+            changeFilterLang,
+            handleMinRatingFilter
+        }
+    }
+})
+</script>
