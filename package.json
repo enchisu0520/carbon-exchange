@@ -15,7 +15,8 @@
     "flowbite": "^1.6.5",
     "flowbite-vue": "^0.0.12",
     "vue": "^3.2.47",
-    "vue-i18n": "^9.2.2"
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",
