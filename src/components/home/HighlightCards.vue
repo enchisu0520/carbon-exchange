@@ -1,16 +1,16 @@
 <template>
     <div
-        class="container relative flex flex-col justify-between max-w-6xl px-10 mx-auto xl:px-0 mt-5"
+        class="container relative max-w-6xl px-10 mx-auto xl:px-0 mt-5"
     >
         <h2 class="mb-10 text-3xl font-extrabold leading-tight text-white">
             {{ $t("latest.events") }}
         </h2>
         <div class="w-full">
-            <div class="flex flex-row mb-10">
-                <div class="w-1/2 flex flex-col">
-                    <div class="flex flex-row mb-4">
+            <div class="md:flex md:flex-row mb-10">
+                <div class="w-full md:w-1/2 md:flex md:flex-col md:mr-2">
+                    <div class="md:flex md:flex-row mb-4">
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full mb-2 md:mr-2 md:w-1/2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.event_1.imgSrc"
@@ -18,7 +18,7 @@
                             />
                         </div>
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full md:mr-2 md:w-1/2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.event_2.imgSrc"
@@ -26,7 +26,7 @@
                             />
                         </div>
                     </div>
-                    <div class="mr-2">
+                    <div class="w-full mb-2 md:mr-2">
                         <ColorCard
                             :imgSrc="mockData.announce_1.imgSrc"
                             :announceHead="mockData.announce_1.announceHead"
@@ -35,8 +35,8 @@
                         />
                     </div>
                 </div>
-                <div class="w-1/2 flex flex-col">
-                    <div class="mb-4">
+                <div class="w-full md:w-1/2 md:flex md:flex-col">
+                    <div class="mb-2 md:mb-4">
                         <ColorCard
                             :imgSrc="mockData.announce_2.imgSrc"
                             :announceHead="mockData.announce_2.announceHead"
@@ -44,9 +44,9 @@
                             :announcementSubTitle="mockData.announce_2.announcementSubTitle"
                         />
                     </div>
-                    <div class="flex flex-row">
+                    <div class="md:flex md:flex-row">
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full mb-2 md:mr-2 md:w-1/2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.event_3.imgSrc"
@@ -54,7 +54,7 @@
                             />
                         </div>
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full md:mr-2 md:w-1/2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.event_4.imgSrc"
@@ -68,7 +68,7 @@
     </div>
 </template>
 <script>
-import { defineComponent, ref, watch, onMounted, onUnmounted } from 'vue'
+import { defineComponent, ref } from 'vue'
 import BlogCard from './BlogCard.vue'
 import ColorCard from './ColorCard.vue'
 
