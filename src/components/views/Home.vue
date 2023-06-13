@@ -1,8 +1,8 @@
 <template>
 	<BackgroundCarousel />
 	<HighlightCards />
-	<div class="h-[50vh] my-10 flex justify-center">
-        <div class="w-3/5 absolute">
+	<div class="md:h-[50vh] my-10 flex justify-center">
+        <div class="w-full md:w-3/5 absolute">
             <IntroVideo />
         </div>
     </div>
