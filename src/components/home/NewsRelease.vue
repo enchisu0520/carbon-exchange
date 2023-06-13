@@ -6,11 +6,11 @@
             {{ $t("news.release") }}
         </h2>
         <div class="w-full">
-            <div class="flex flex-row mb-10">
-                <div class="w-1/2 flex flex-col mr-3">
-                    <div class="flex flex-row mb-4">
+            <div class="md:flex md:flex-row mb-10">
+                <div class="md:w-1/2 flex flex-col mr-3">
+                    <div class="md:flex md:flex-row md:mb-4">
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full mb-2 md:w-1/2 md:mr-2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.news_1.imgSrc"
@@ -18,7 +18,7 @@
                             />
                         </div>
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full md:w-1/2 md:mr-2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.news_2.imgSrc"
@@ -45,16 +45,16 @@
                         :announcementSubTitle="mockData.external_ad.announcementSubTitle"
                     />
                 </div>
-                <div class="w-1/2 flex flex-col">
+                <div class="md:w-1/2 flex flex-col">
                     <AnnouncementCard
                         :date="mockData.comm_2.date"
                         :announcementHeader="mockData.comm_2.announcementHeader"
                         :announcementTitle="mockData.comm_2.announcementTitle"
                         :announcementBrief="mockData.comm_2.announcementBrief"
                     />
-                    <div class="flex flex-row mb-4">
+                    <div class="md:flex md:flex-row md:mb-4">
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full mb-2 md:w-1/2 md:mr-2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.news_3.imgSrc"
@@ -62,7 +62,7 @@
                             />
                         </div>
                         <div
-                            class="mr-2 w-1/2"
+                            class="w-full mb-2 md:w-1/2 md:mr-2"
                         >
                             <BlogCard
                                 :imgSrc="mockData.news_4.imgSrc"
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div
-                        class="mx-2 bg-gray-200 rounded-lg px-2 py-2"
+                        class="md:mx-2 bg-gray-200 rounded-lg px-2 py-2"
                     >
                         <Calendar/>
                     </div>
