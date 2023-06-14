@@ -1,14 +1,55 @@
 <template>
     <section
-        class="scroll-pt-9 w-2/3 rounded-lg border border-gray-100 p-6 sm:p-6 lg:p-6 mb-8 shadow-md bg-white"
+        class="scroll-pt-9 w-full md:w-2/3 rounded-lg border border-gray-100 p-6 sm:p-6 lg:p-6 mb-8 shadow-md bg-white"
         :key="index"
         v-for="(tutor, index) in mockData"
     >
         <div
+            class="w-full py-4 md:hidden"
+        >
+            <div class="grid grid-cols-9">
+                <img
+                    :alt="`${tutor.name}`"
+                    :src="`${tutor.imgSrc}`"
+                    class="col-span-2 rounded-full object-cover shadow-sm mb-3 mx-auto"
+                />
+                <div
+                    class="col-start-3 col-end-9 ml-3"
+                >
+                    <h3
+                        class="text-base mb-1 font-bold text-gray-900 sm:text-base"
+                    >
+                        {{ tutor.name }}
+                    </h3>
+                    <div class="text-base mb-1 text-gray-500 sm:text-sm">
+                        {{ tutor.type }}
+                    </div>
+                    <div
+                        class="flex"
+                    >
+                        <div class="text-center text-sm text-yellow-400 mb-2 mr-3">
+                            ⭐ {{ tutor.avgReview }}
+                        </div>
+                        <div class="text-center text-sm">
+                            {{ tutor.lessonHeld }} Lessons
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-row mb-1">
+                <div class="text-gray-600 text-sm mr-3">
+                    SUBJECT: {{ tutor.subjects }}
+                </div>
+            </div>
+            <p class="mt-1 text-sm font-medium text-gray-600">
+                {{ parseIntro(tutor.intro, true) }}
+            </p>
+        </div>
+        <div
             :data-popover-target="'popover-right-' + index"
             data-popover-placement="right"
             data-popover-offset="30"
-            class="grid grid-cols-4 gap-10 w-full py-4"
+            class="hidden md:grid md:grid-cols-4 md:gap-10 md:w-full md:py-4"
         >
             <div class="col-span-1 sm:block sm:shrink-0">
                 <img
@@ -26,11 +67,11 @@
             <div id="personalInfo" class="col-start-2 col-end-5">
                 <div>
                     <h3
-                        class="text-lg mb-2 font-bold text-gray-900 sm:text-lg"
+                        class="text-base mb-2 font-bold text-gray-900 sm:text-base"
                     >
                         {{ tutor.name }}
                     </h3>
-                    <div class="text-lg mb-1 text-gray-500 sm:text-base">
+                    <div class="text-base mb-1 text-gray-500 sm:text-sm">
                         {{ tutor.type }}
                     </div>
                     <div class="flex flex-row mb-5">
@@ -39,8 +80,8 @@
                             {{ tutor.subjects }}
                         </div>
                     </div>
-                    <p class="mt-1 text-base font-medium text-gray-600">
-                        {{ parseIntro(tutor.intro) }}
+                    <p class="mt-1 text-sm font-medium text-gray-600">
+                        {{ parseIntro(tutor.intro, false) }}
                     </p>
                 </div>
             </div>
@@ -102,7 +143,6 @@ export default defineComponent({
     },
     setup() {
         const mockUser = ref('John Doll')
-        const maxWordCount = 300
         const isConfirmationModalOpen = ref(false)
         let selectedTimeSlots = ref({})
 
@@ -128,7 +168,13 @@ export default defineComponent({
             return shortenedStr
         }
 
-        const parseIntro = val => {
+        const parseIntro = (val, isMobile) => {
+            let maxWordCount;
+            if(isMobile){
+                maxWordCount = 100
+            }else{
+                maxWordCount = 300
+            }
             let len = val.length
             if (len <= maxWordCount) {
                 return val

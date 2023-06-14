@@ -6,7 +6,7 @@
                 <div class="text-red-500 mx-2">{{ $t("class.search.header2") }}</div>
                 {{ $t("class.search.header3") }}
             </div>
-            <p class="text-base">
+            <p class="text-base w-5/6 md:w-full">
                 {{ $t("class.search.subheader") }}
             </p>
         </div>
