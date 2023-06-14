@@ -746,7 +746,7 @@
                 aria-controls="mobile-menu"
                 data-drawer-placement="top"
                 type="button"
-                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all"
+                class="inline-flex items-center p-2 text-sm text-white rounded-lg md:hidden focus:bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all"
             >
                 <Icon icon="menu" />
             </button>
