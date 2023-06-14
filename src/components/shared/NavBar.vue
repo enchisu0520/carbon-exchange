@@ -170,7 +170,9 @@
                         </div>
                     </Dropdown>
                 </nav>
-                <nav>
+                <nav
+                    class="hidden md:block"
+                >
                     <ul class="flex">
                         <!--Hoverable Link-->
                         <li
@@ -737,54 +739,75 @@
                     </ul>
                 </nav>
             </div>
+            <!-- Hamburguer Menu Button -->
+            <button
+                data-drawer-target="mobile-menu"
+                data-drawer-toggle="mobile-menu"
+                aria-controls="mobile-menu"
+                data-drawer-placement="top"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden focus:bg-gray-100 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all"
+            >
+                <Icon icon="menu" />
+            </button>
         </div>
     </nav>
     <!-- Mobile menu -->
     <aside
         id="mobile-menu"
-        class="fixed top-0 right-0 z-40 w-full p-4 pt-[calc(92px+1rem)] transition-transform -translate-y-full dark:bg-gray-800"
+        class="bg-gray-800 fixed top-0 right-0 z-40 w-full p-4 pt-[calc(92px+1rem)] transition-transform -translate-y-full"
         tabindex="-1"
         aria-label="Sidebar menu"
     >
-        <div class="h-full overflow-y-auto bg-white dark:bg-gray-800">
+        <div class="h-full overflow-y-auto bg-gray-800 dark:bg-gray-800">
             <ul class="space-y-2">
                 <li>
-                    <inertia-link
+                    <router-link
                         v-if="!showLanguages"
-                        href="/"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                        to="/"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
                         <Icon icon="home" />
-                        <span class="ml-3">Home</span>
-                    </inertia-link>
+                        <span class="ml-3">{{$t('navbar.header.home')}}</span>
+                    </router-link>
                 </li>
                 <li>
-                    <inertia-link
+                    <router-link
                         v-if="!showLanguages"
-                        href="/tutors"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                        to="/class-search"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
                         <Icon icon="magnifying-glass-dark" />
-                        <span class="ml-3">Find Sherpas</span>
-                    </inertia-link>
+                        <span class="ml-3">{{$t('navbar.header.products')}}</span>
+                    </router-link>
                 </li>
                 <li>
-                    <inertia-link
+                    <router-link
                         v-if="!showLanguages"
-                        href="/besherpa"
-                        class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                        to="/"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                    >
+                        <Icon icon="clipboard-document" />
+                        <span class="ml-3">{{$t('navbar.header.services')}}</span>
+                    </router-link>
+                </li>
+                <li>
+                    <router-link
+                        v-if="!showLanguages"
+                        to="/"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                     >
                         <Icon icon="users-group" />
-                        <span class="ml-3">Be a Sherpa</span>
-                    </inertia-link>
+                        <span class="ml-3">{{$t('navbar.header.join')}}</span>
+                    </router-link>
                 </li>
                 <li>
                     <button
                         @click="toggleLanguages()"
-                        class="w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                        class="flex items-center p-2 text-base font-normal rounded-lg text-white dark:hover:bg-gray-700"
                     >
                         <Icon icon="globe" />
-                        <span class="ml-3">Language</span>
+                        <span class="ml-3">{{$t('navbar.header.lang')}}</span>
                         <span class="ml-auto">
                             <Icon
                                 :icon="
@@ -798,17 +821,15 @@
                     <ul v-if="showLanguages">
                         <hr class="border-2 border-gray-100 my-4" />
                         <button
-                            @click="$i18n.locale = 'en'"
-                            class="w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                            @click="$i18n.locale = 'en'; toggleLanguages()"
+                            class="w-full flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                         >
-                            EN
                             <span class="ml-3">English</span>
                         </button>
                         <button
-                            @click="$i18n.locale = 'tw'"
-                            class="w-full flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
+                            @click="$i18n.locale = 'tw'; toggleLanguages()"
+                            class="w-full flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                         >
-                            TW
                             <span class="ml-3">Mandarin</span>
                         </button>
                     </ul>
