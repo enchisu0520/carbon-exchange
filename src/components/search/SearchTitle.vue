@@ -1,9 +1,9 @@
 <template>
     <div class="w-5/6 container mx-auto flex flex-wrap pt-6 pb-1">
         <div id="searchResultsFilter" class="my-12 bg-white">
-            <div class="text-3xl mb-8 flex font-bold">
+            <div class="text-3xl mb-8 font-bold">
                 {{ $t("class.search.header1") }}
-                <div class="text-red-500 mx-2">{{ $t("class.search.header2") }}</div>
+                <span class="text-red-500 mx-2">{{ $t("class.search.header2") }}</span>
                 {{ $t("class.search.header3") }}
             </div>
             <p class="text-base w-5/6 md:w-full">
@@ -11,7 +11,7 @@
             </p>
         </div>
         <nav
-            class="flex text-sm font-medium mb-3 justify-between w-full"
+            class="hidden md:flex md:text-sm md:font-medium md:mb-3 md:justify-between md:w-full"
             :class="{
                 'w-full lg:px-28 sm:pl-20 left-0 z-10 fixed top-0 mt-0 bg-white shadow-md h-14 align-middle':
                     showFrozenTitle
@@ -157,7 +157,63 @@
                 <SearchFilter />
             </div>
         </nav>
+        <nav
+            class="w-full flex justify-between md:hidden"
+            :class="{
+                'w-full lg:px-28 sm:pl-20 left-0 z-10 fixed top-0 mt-0 bg-white shadow-md h-14 align-middle':
+                    showFrozenTitle
+            }"
+        >
+            <span class="flex">
+                <button
+                    class="flex font-medium rounded-full text-sm text-black px-4 py-3 mr-3 text-center items-center focus:bg-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all bg-gray-100"
+                    :class="{
+                        'my-1.5': showFrozenTitle
+                    }"
+                    type="button"
+                    @click="showMobileLangFilter"
+                >
+                    {{ filterLang }}
+                    <svg
+                        class="w-4 h-4 ml-2"
+                        aria-hidden="true"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M19 9l-7 7-7-7"
+                        ></path>
+                    </svg>
+                </button>
+            </span>
+            <div
+                id="searchFilter"
+                :class="{
+                    'my-1.5': showFrozenTitle
+                }"
+            >
+                <SearchFilter 
+                    :showMobileSearchFilter = "showMobileSearchFilter"
+                />
+            </div>
+        </nav>
     </div>
+    <mobile-lang-filter
+        class="md:hidden"
+        :isMobileLangFilterOpen = isMobileLangFilterOpen
+        :changeFilterLang = changeFilterLang
+        @closeMobileLangFilter = "closeMobileLangFilter"
+    />
+    <mobile-search-filter
+        class="md:hidden"
+        :isMobileSearchFilterOpen = isMobileSearchFilterOpen
+        @closeMobileSearchFilter = "closeMobileSearchFilter"
+    />
 </template>
 <script>
 import { defineComponent, ref, onMounted, onUnmounted, toRefs } from 'vue'
@@ -165,6 +221,8 @@ import { Dropdown } from 'flowbite-vue'
 import PriceFilter from './PriceFilter.vue'
 import SearchFilter from './SearchFilter.vue'
 import StarRating from './StarRating.vue'
+import MobileLangFilter from './MobileLangFilter.vue'
+import MobileSearchFilter from './MobileSearchFilter.vue'
 
 export default defineComponent({
     props: {
@@ -174,7 +232,9 @@ export default defineComponent({
         Dropdown,
         StarRating,
         PriceFilter,
-        SearchFilter
+        SearchFilter,
+        MobileLangFilter,
+        MobileSearchFilter
     },
     setup(props, { emit }) {
         const { selectedLang } = toRefs(props)
@@ -182,6 +242,33 @@ export default defineComponent({
         let filterLang = ref('English')
         let filterMinRating = ref(null)
         const limitPosition = -32
+        let isMobileLangFilterOpen = ref(false)
+        let isMobileFilterListOpen = ref(false)
+        let isMobileSearchFilterOpen = ref(false)
+
+        const showMobileLangFilter = () => {
+            isMobileLangFilterOpen.value = true
+        }
+
+        const closeMobileLangFilter = () => {
+            isMobileLangFilterOpen.value = false
+        }
+
+        const showMobileFilterList = () => {
+            isMobileFilterListOpen.value = true
+        }
+
+        const closeMobileFilterList = () => {
+            isMobileFilterListOpen.value = false
+        }
+
+        const showMobileSearchFilter = () => {
+            isMobileSearchFilterOpen.value = true
+        }
+
+        const closeMobileSearchFilter = () => {
+            isMobileSearchFilterOpen.value = false
+        }
 
         const changeFilterLang = lang => {
             filterLang.value = lang
@@ -218,6 +305,15 @@ export default defineComponent({
             filterLang,
             filterMinRating,
             selectedLang,
+            isMobileSearchFilterOpen,
+            isMobileLangFilterOpen,
+            isMobileFilterListOpen,
+            showMobileLangFilter,
+            closeMobileLangFilter,
+            showMobileFilterList,
+            closeMobileFilterList,
+            showMobileSearchFilter,
+            closeMobileSearchFilter,
             changeFilterLang,
             handleMinRatingFilter
         }
