@@ -1,5 +1,8 @@
 {
     "language": "語言",
+    "filters": "篩選器",
+    "price": "價格",
+    "rating": "評價",
     "navbar.about.us": "關於我們",
     "about.carbon.exchange": "關於碳交所",
     "investor.relation": "投資人關係",

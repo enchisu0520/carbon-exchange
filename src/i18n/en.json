@@ -1,5 +1,8 @@
 {
     "language": "Language",
+    "filters": "Filters",
+    "price": "Price",
+    "rating": "Rating",
     "navbar.about.us": "About Us",
     "about.carbon.exchange": "About TCE",
     "investor.relation": "Investor Relation",
