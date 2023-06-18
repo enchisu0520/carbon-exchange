@@ -166,7 +166,7 @@ export default defineComponent({
             return mockData.value.filter((item)=>item.avgReview > minRatingScore.value)
         });
 
-        const selectedLang = ref('English')
+        const selectedLang = ref('中文')
 
         const handleRatingFilter = minRating => {
             minRatingScore.value = minRating

@@ -164,33 +164,64 @@
                     showFrozenTitle
             }"
         >
-            <span class="flex">
-                <button
-                    class="flex font-medium rounded-full text-sm text-black px-4 py-3 mr-3 text-center items-center focus:bg-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all bg-gray-100"
-                    :class="{
-                        'my-1.5': showFrozenTitle
-                    }"
-                    type="button"
-                    @click="showMobileLangFilter"
-                >
-                    {{ filterLang }}
-                    <svg
-                        class="w-4 h-4 ml-2"
-                        aria-hidden="true"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+            <div
+                class="flex"
+            >
+                <span class="flex">
+                    <button
+                        class="flex font-medium rounded-full text-sm text-black px-4 py-3 mr-3 text-center items-center focus:bg-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all bg-gray-100"
+                        :class="{
+                            'my-1.5': showFrozenTitle
+                        }"
+                        type="button"
+                        @click="showMobileLangFilter"
                     >
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M19 9l-7 7-7-7"
-                        ></path>
-                    </svg>
-                </button>
-            </span>
+                        {{ filterLang }}
+                        <svg
+                            class="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                            ></path>
+                        </svg>
+                    </button>
+                </span>
+                <span class="flex">
+                    <button
+                        class="flex font-medium rounded-full text-sm text-black px-4 py-3 mr-3 text-center items-center focus:bg-gray-200 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 transition-all bg-gray-100"
+                        :class="{
+                            'my-1.5': showFrozenTitle
+                        }"
+                        type="button"
+                        @click="showMobileFilterList"
+                    >
+                        {{ $t("filters") }}
+                        <svg
+                            class="w-4 h-4 ml-2"
+                            aria-hidden="true"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                            ></path>
+                        </svg>
+                    </button>
+                </span>
+            </div>
             <div
                 id="searchFilter"
                 :class="{
@@ -209,6 +240,12 @@
         :changeFilterLang = changeFilterLang
         @closeMobileLangFilter = "closeMobileLangFilter"
     />
+    <mobile-filter-list
+        class="md:hidden"
+        :handleMinRatingFilter = handleMinRatingFilter
+        :isMobileFilterListOpen = isMobileFilterListOpen
+        @closeMobileFilterList = "closeMobileFilterList"
+    />
     <mobile-search-filter
         class="md:hidden"
         :isMobileSearchFilterOpen = isMobileSearchFilterOpen
@@ -222,6 +259,7 @@ import PriceFilter from './PriceFilter.vue'
 import SearchFilter from './SearchFilter.vue'
 import StarRating from './StarRating.vue'
 import MobileLangFilter from './MobileLangFilter.vue'
+import MobileFilterList from './MobileFilterList.vue'
 import MobileSearchFilter from './MobileSearchFilter.vue'
 
 export default defineComponent({
@@ -234,12 +272,13 @@ export default defineComponent({
         PriceFilter,
         SearchFilter,
         MobileLangFilter,
+        MobileFilterList,
         MobileSearchFilter
     },
     setup(props, { emit }) {
         const { selectedLang } = toRefs(props)
         let showFrozenTitle = ref(false)
-        let filterLang = ref('English')
+        let filterLang = ref('中文')
         let filterMinRating = ref(null)
         const limitPosition = -32
         let isMobileLangFilterOpen = ref(false)
