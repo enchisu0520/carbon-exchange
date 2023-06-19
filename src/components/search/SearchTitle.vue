@@ -81,7 +81,7 @@
                     }"
                     type="button"
                 >
-                    Ratings
+                    {{ $t("rating") }}
                     <svg
                         class="w-4 h-4 ml-2"
                         aria-hidden="true"
@@ -123,7 +123,7 @@
                     }"
                     type="button"
                 >
-                    Lesson price
+                    {{ $t("price") }}
                     <svg
                         class="w-4 h-4 ml-2"
                         aria-hidden="true"
