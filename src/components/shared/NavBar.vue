@@ -176,21 +176,21 @@
                     <ul class="flex">
                         <!--Hoverable Link-->
                         <li
-                            class="rounded-t-lg hoverable hover:bg-teal-700 hover:text-white"
+                            class="rounded-t-lg hoverable hover:text-black"
                         >
                             <a
                                 href="#"
-                                class="rounded-t-lg text-white relative block py-3 lg:px-6 lg:p-3 text-sm lg:text-base font-bold hover:bg-teal-700 hover:text-white"
+                                class="rounded-t-lg text-white relative block py-3 lg:px-6 lg:p-3 text-sm lg:text-base font-bold hover:bg-red-700 hover:text-white"
                                 >{{$t('navbar.header.products')}}</a
                             >
                             <div
-                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-teal-700"
+                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-100"
                             >
                                 <div
                                     class="container mx-auto w-full flex flex-wrap justify-between mx-2"
                                 >
                                     <div
-                                        class="w-full text-white mb-8 text-center"
+                                        class="w-full text-gray-700 mb-8 text-center"
                                     >
                                         <h2 class="font-bold text-2xl">
                                             {{ $t("navbar.header.product.title") }}
@@ -206,7 +206,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -215,17 +215,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{ $t('navbar.menu.products.carbon.platform') }}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{ $t('navbar.menu.products.carbon.platform.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -235,7 +235,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -245,7 +245,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -254,17 +254,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{ $t('navbar.menu.products.carbon.watch') }}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{ $t('navbar.menu.products.carbon.watch.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -274,7 +274,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -284,7 +284,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -293,17 +293,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{ $t('navbar.menu.products.energy.watch') }}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{ $t('navbar.menu.products.energy.watch.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -313,7 +313,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -323,7 +323,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -332,17 +332,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{ $t('navbar.menu.products.sustainable.finder') }}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{ $t('navbar.menu.products.energy.watch.description') }}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -352,7 +352,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -363,7 +363,7 @@
                         <!--end Hoverable Link-->
                         <!--Hoverable Link-->
                         <li
-                            class="rounded-t-lg hoverable hover:bg-yellow-600 hover:text-white"
+                            class="rounded-t-lg hoverable hover:text-white"
                         >
                             <a
                                 href="#"
@@ -371,13 +371,13 @@
                                 >{{$t('navbar.header.services')}}</a
                             >
                             <div
-                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-yellow-600"
+                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-100"
                             >
                                 <div
                                     class="container mx-auto w-full flex flex-wrap justify-between mx-2"
                                 >
                                     <div
-                                        class="w-full text-white mb-8 text-center"
+                                        class="w-full text-gray-700 mb-8 text-center"
                                     >
                                         <h2 class="font-bold text-2xl">
                                             {{ $t("navbar.header.service.title") }}
@@ -393,7 +393,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -402,17 +402,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.services.education.platform')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.services.education.platform.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -421,7 +421,7 @@
                                                 />
                                             </svg>
                                             <router-link
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 to="/class-search"
                                             >
                                                 {{ $t("find.more") }}
@@ -433,7 +433,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -442,17 +442,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.services.certification.platform')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.services.certification.platform.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -462,7 +462,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -472,7 +472,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -481,17 +481,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.services.trade.consult')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.services.trade.consult.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -501,7 +501,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -511,7 +511,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -520,17 +520,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.services.measure.consult')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.services.measure.consult.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -540,7 +540,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -559,13 +559,13 @@
                                 >{{$t('navbar.header.join')}}</a
                             >
                             <div
-                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-gray-500"
+                                class="p-6 mega-menu mb-16 sm:mb-0 shadow-xl bg-white"
                             >
                                 <div
                                     class="container mx-auto w-full flex flex-wrap justify-between mx-2"
                                 >
                                     <div
-                                        class="w-full text-white mb-8 text-center"
+                                        class="w-full text-gray-700 mb-8 text-center"
                                     >
                                         <h2 class="font-bold text-2xl">
                                             {{ $t("navbar.header.join.title") }}
@@ -581,7 +581,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -590,17 +590,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.join.carbon.trade')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.join.carbon.trade.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -610,7 +610,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -620,7 +620,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -629,17 +629,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.join.carbon.provider')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.join.carbon.provider.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -649,7 +649,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -659,7 +659,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -668,17 +668,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.join.carbon.certification')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.join.carbon.certification.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -688,7 +688,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
@@ -698,7 +698,7 @@
                                     >
                                         <div class="flex items-center">
                                             <svg
-                                                class="h-8 mb-3 mr-3 fill-current text-white"
+                                                class="h-8 mb-3 mr-3 fill-current text-gray-700"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -707,17 +707,17 @@
                                                 />
                                             </svg>
                                             <h3
-                                                class="font-bold text-xl text-white text-bold mb-2"
+                                                class="font-bold text-xl text-gray-700 text-bold mb-2"
                                             >
                                                 {{$t('navbar.menu.join.us')}}
                                             </h3>
                                         </div>
-                                        <p class="text-gray-100 text-sm">
+                                        <p class="text-gray-700 text-sm">
                                             {{$t('navbar.menu.join.us.description')}}
                                         </p>
                                         <div class="flex items-center py-3">
                                             <svg
-                                                class="h-6 pr-3 fill-current text-teal-300"
+                                                class="h-6 pr-3 fill-current text-green-500"
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 20 20"
                                             >
@@ -727,7 +727,7 @@
                                             </svg>
                                             <a
                                                 href="#"
-                                                class="text-white bold border-b-2 border-teal-300 hover:text-teal-900"
+                                                class="text-gray-700 bold border-b-2 border-green-500 hover:text-teal-900"
                                                 >{{ $t("find.more") }}</a
                                             >
                                         </div>
