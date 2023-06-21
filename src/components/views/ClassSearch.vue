@@ -14,6 +14,9 @@
             </div>
         </div>
     </div>
+    <div class="z-50 absolute top-[100vh] w-full">
+		<CookieConsent />
+	</div>
 </template>
 
 <script>
@@ -21,12 +24,14 @@ import { defineComponent, ref, computed } from 'vue'
 import SearchTitle from '../search/SearchTitle.vue'
 import SearchResultsTitle from '../search/SearchResultsTitle.vue'
 import TutorCard from '../search/TutorCard.vue'
+import CookieConsent from '../shared/CookieConsent.vue'
 
 export default defineComponent({
     components: {
         SearchTitle,
         SearchResultsTitle,
-        TutorCard
+        TutorCard,
+        CookieConsent
     },
     setup() {
         const mockData = ref([

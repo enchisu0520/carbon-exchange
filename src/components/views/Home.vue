@@ -12,6 +12,9 @@
 	<div class="sticky top-[100vh] w-full">
 		<CarbonFooter />
 	</div>
+	<div class="z-50 absolute top-[100vh] w-full">
+		<CookieConsent />
+	</div>
 </template>
 
 <script setup>
@@ -20,4 +23,5 @@ import HighlightCards from '../home/HighlightCards.vue'
 import IntroVideo from '../home/IntroVideo.vue'
 import NewsRelease from '../home/NewsRelease.vue'
 import CarbonFooter from '../shared/CarbonFooter.vue'
+import CookieConsent from '../shared/CookieConsent.vue'
 </script>
