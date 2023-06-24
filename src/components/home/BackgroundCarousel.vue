@@ -37,7 +37,7 @@ export default defineComponent({
     setup() {
         const images = ref([
             'img/forest-canopy.jpg',
-            'img/city-night-traffic.jpg',
+            'img/busy-city-night.jpg',
             'img/green-coast.jpg'
         ])
         const currentIndex = ref(0)
