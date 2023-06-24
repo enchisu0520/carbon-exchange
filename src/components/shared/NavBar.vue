@@ -134,7 +134,7 @@
 
                         <!-- Dropdown menu -->
                         <div
-                            class="bg-white divide-y divide-gray-100 rounded-lg shadow w-28 dark:bg-gray-700"
+                            class="bg-white divide-y divide-gray-100 rounded-lg shadow w-32 dark:bg-gray-700"
                         >
                             <ul
                                 class="py-2 text-sm text-gray-700 dark:text-gray-200"
@@ -154,7 +154,7 @@
                                         class="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:text-purple transition-all cursor-pointer"
                                     >
                                         <span class="fi fi-gb mr-2"></span>
-                                        EN
+                                        {{ $t("lang.en") }}
                                     </a>
                                 </li>
                                 <li>
@@ -163,7 +163,7 @@
                                         class="block px-4 py-2 text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white hover:text-purple transition-all cursor-pointer"
                                     >
                                         <span class="fi fi-tw mr-2"></span>
-                                        TW
+                                        {{ $t("lang.tw") }}
                                     </a>
                                 </li>
                             </ul>
@@ -824,13 +824,13 @@
                             @click="$i18n.locale = 'en'; toggleLanguages()"
                             class="w-full flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                         >
-                            <span class="ml-3">English</span>
+                            <span class="ml-3">{{ $t("lang.en") }}</span>
                         </button>
                         <button
                             @click="$i18n.locale = 'tw'; toggleLanguages()"
                             class="w-full flex items-center p-2 text-base font-normal rounded-lg text-white hover:bg-gray-100 dark:hover:bg-gray-700"
                         >
-                            <span class="ml-3">Mandarin</span>
+                            <span class="ml-3">{{ $t("lang.tw") }}</span>
                         </button>
                     </ul>
                 </li>
