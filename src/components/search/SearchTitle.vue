@@ -1,12 +1,12 @@
 <template>
-    <div class="w-5/6 container mx-auto flex flex-wrap pt-6 pb-1">
+    <div class="w-5/6 mx-auto flex flex-wrap pt-6 pb-1">
         <div id="searchResultsFilter" class="my-12 bg-white">
             <div class="text-3xl mb-8 font-bold">
                 {{ $t("class.search.header1") }}
                 <span class="text-red-500 mx-2">{{ $t("class.search.header2") }}</span>
                 {{ $t("class.search.header3") }}
             </div>
-            <p class="text-base w-5/6 md:w-full">
+            <p class="text-base md:w-full">
                 {{ $t("class.search.subheader") }}
             </p>
         </div>
