@@ -38,7 +38,7 @@
             </div>
             <div class="flex flex-row mb-1">
                 <div class="text-gray-600 text-sm mr-3">
-                    SUBJECT: {{ tutor.subjects }}
+                    Subjects: {{ tutor.subjects }}
                 </div>
             </div>
             <p class="mt-1 text-sm font-medium text-gray-600">
@@ -71,12 +71,12 @@
                     >
                         {{ tutor.name }}
                     </h3>
-                    <div class="text-base mb-1 text-gray-500 sm:text-sm">
+                    <div class="text-base mb-2 text-gray-500 sm:text-sm">
                         {{ tutor.type }}
                     </div>
-                    <div class="flex flex-row mb-5">
-                        <div class="text-gray-400 text-base mr-4">Subjects:</div>
-                        <div class="text-gray-600 text-base mr-3">
+                    <div class="flex flex-row mb-3">
+                        <div class="text-gray-400 text-sm mr-4">Subjects:</div>
+                        <div class="text-gray-600 text-sm mr-3">
                             {{ tutor.subjects }}
                         </div>
                     </div>
