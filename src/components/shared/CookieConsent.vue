@@ -1,6 +1,6 @@
 <template>
 	<div 
-		class="fixed bottom-0 left-0 w-full max-w-fit h-[30vh] md:h-[20vh] bg-gray-200 px-4 py-2"
+		class="fixed bottom-0 left-0 w-full h-[30vh] md:h-[20vh] bg-gray-200 px-4 py-2"
 		:class="{
 			'hidden':
 				!showCookie
@@ -13,7 +13,7 @@
 				</p>
 			</div>
 			<div
-				class="flex flex-col md:flex md:justify-between"
+				class="flex flex-col md:flex md:flex-row md:justify-between"
 			>
 				<div
 					class="text-base mb-5 md:w-[70vw]"
