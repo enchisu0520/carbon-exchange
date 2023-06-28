@@ -2,7 +2,7 @@
 	<BackgroundCarousel />
 	<HighlightCards />
 	<div class="md:h-[50vh] my-10 flex justify-center">
-        <div class="w-full md:w-3/5 absolute">
+        <div class="w-full md:w-3/5">
             <IntroVideo />
         </div>
     </div>
