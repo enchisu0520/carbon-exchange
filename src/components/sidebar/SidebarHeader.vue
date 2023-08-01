@@ -4,7 +4,7 @@
             :to="{ name: 'home' }"
             class="inline-flex items-center gap-2"
         >
-            <span class="text-sm font-bold">Taiwan Carbon Exchange</span>
+            <span class="text-lg font-bold">Simple Auditing</span>
         </router-link>
 
         <Button
