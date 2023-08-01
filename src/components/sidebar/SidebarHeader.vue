@@ -1,7 +1,7 @@
 <template>
     <div class="flex items-center justify-between flex-shrink-0 px-3">
         <router-link
-            :to="{ name: 'home' }"
+            :to="{ name: 'dashboard' }"
             class="inline-flex items-center gap-2"
         >
             <span class="text-lg font-bold">Simple Auditing</span>
