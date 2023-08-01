@@ -1,12 +1,11 @@
 <template>
     <div class="flex items-center justify-between flex-shrink-0 px-3">
         <router-link
-            :to="{ name: 'dashboard' }"
+            to="/dashboard"
             class="inline-flex items-center gap-2"
         >
             <span class="text-lg font-bold">Simple Auditing</span>
         </router-link>
-
         <Button
             icon-only
             variant="secondary"
