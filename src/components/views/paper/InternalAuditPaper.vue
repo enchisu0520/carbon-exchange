@@ -1,5 +1,5 @@
 <template>
-	<PageWrapper title="Internal Audit Paper">
+	<PageWrapper title="內控內稽查核底稿">
 		<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
 			<div class="flex items-center justify-between pb-4">
 				<div>
@@ -408,5 +408,11 @@
 </template>
 <script setup>
 import PageWrapper from "../../shared/PageWrapper.vue";
+import { initDropdowns } from 'flowbite'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+	initDropdowns()
+})
 </script>
 
