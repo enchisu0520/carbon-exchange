@@ -8,6 +8,9 @@ import Dashboard from "../components/views/Dashboard.vue";
 import FinancialPaper from "../components/views/paper/FinancialPaper.vue";
 import InternalAuditPaper from "../components/views/paper/InternalAuditPaper.vue";
 import InformationSecurityPaper from "../components/views/paper/InformationSecurityPaper.vue";
+import FinancialBank from "../components/views/bank/FinancialBank.vue";
+import InternalAuditBank from "../components/views/bank/InternalAuditBank.vue";
+import InformationSecurityBank from "../components/views/bank/InformationSecurityBank.vue";
 
 const routes = [
 	{
@@ -49,6 +52,21 @@ const routes = [
 				path: '/paper/information-security',
 				name: 'InformationSecurityPaper',
 				component: InformationSecurityPaper,
+			},
+			{
+				path: '/bank/finance',
+				name: 'FinancialBank',
+				component: FinancialBank,
+			},
+			{
+				path: '/bank/internal-autdit',
+				name: 'InternalAuditBank',
+				component: InternalAuditBank,
+			},
+			{
+				path: '/bank/information-security',
+				name: 'InformationSecurityBank',
+				component: InformationSecurityBank,
 			},
 		],
 	},
