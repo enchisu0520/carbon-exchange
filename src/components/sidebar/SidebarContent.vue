@@ -22,28 +22,49 @@
 			<span
 				class="text-base font-medium"
 				v-show="sidebarState.isOpen || sidebarState.isHovered"
-				>Setting</span
+				>偏好設定</span
 			>
 		</button>
+        <SidebarCollapsible
+			icon="mdi:note-outline"
+			title="查核題庫"
+			:active="isCurrentPath('/bank')"
+		>
+			<SidebarCollapsibleItem
+                :to="{ name: 'FinancialBank' }"
+                title="財務"
+                :active="isCurrentRoute('/bank/finance')"
+            />
+            <SidebarCollapsibleItem
+                :to="{ name: 'InternalAuditBank' }"
+                title="內控內稽"
+                :active="isCurrentRoute('/bank/internal-audit')"
+            />
+            <SidebarCollapsibleItem
+                :to="{ name: 'InformationSecurityBank' }"
+                title="資訊安全"
+                :active="isCurrentRoute('/bank/information-security')"
+            />
+		</SidebarCollapsible>
 		<SidebarCollapsible
 			icon="mdi:note-outline"
-			title="Paper"
+			title="查核底稿"
 			:active="isCurrentPath('/paper')"
 		>
 			<SidebarCollapsibleItem
                 :to="{ name: 'FinancialPaper' }"
-                title="Finance"
-                :active="isCurrentRoute('/paperfinance')"
+                title="財務"
+                :active="isCurrentRoute('/paper/finance')"
             />
             <SidebarCollapsibleItem
                 :to="{ name: 'InternalAuditPaper' }"
-                title="Internal Audit"
-                :active="isCurrentRoute('/paperinternal-autdit')"
+                title="內控內稽"
+                :active="isCurrentRoute('/paper/internal-autdit')"
             />
             <SidebarCollapsibleItem
                 :to="{ name: 'InformationSecurityPaper' }"
-                title="Information Security"
-                :active="isCurrentRoute('/paperinformation-security')"
+                title="資訊安全"
+                :active="isCurrentRoute('/paper/information-security')"
             />
 		</SidebarCollapsible>
 
