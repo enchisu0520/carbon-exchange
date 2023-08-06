@@ -1,9 +1,14 @@
 <template>
 	<PageWrapper title="資訊安全查核題庫">
-		<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+		<div class="relative overflow-x-auto shadow-lg sm:rounded-lg p-3">
 			<div class="flex items-center justify-between py-4 pr-4">
 				<div>
-					<button type="button" class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">匯出成底稿</button>
+					<button
+						type="button"
+						class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+					>
+						匯出為底稿
+					</button>
 				</div>
 				<label for="table-search" class="sr-only">Search</label>
 				<div class="relative">
@@ -35,7 +40,7 @@
 			<table
 				class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
 			>
-			<thead
+				<thead
 					class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
 				>
 					<tr>
@@ -66,7 +71,7 @@
 					<tr
 						class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
 						:key="index"
-        				v-for="(question, index) in mockQuestionBank"
+						v-for="(question, index) in mockQuestionBank"
 					>
 						<td class="w-4 p-4">
 							<div class="flex items-center">
@@ -116,8 +121,8 @@
 </template>
 <script setup>
 import PageWrapper from "../../shared/PageWrapper.vue";
-import { initDropdowns } from 'flowbite'
-import { onMounted } from 'vue'
+import { initDropdowns } from "flowbite";
+import { onMounted } from "vue";
 
 const mockQuestionBank = [
 	{
@@ -165,7 +170,6 @@ const mockQuestionBank = [
 ];
 
 onMounted(() => {
-	initDropdowns()
-})
+	initDropdowns();
+});
 </script>
-
