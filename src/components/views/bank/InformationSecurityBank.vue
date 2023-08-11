@@ -6,6 +6,7 @@
 					<button
 						type="button"
 						class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+						@click="showExportModal"
 					>
 						匯出為底稿
 					</button>
@@ -76,9 +77,11 @@
 						<td class="w-4 p-4">
 							<div class="flex items-center">
 								<input
-									id="checkbox-table-search-1"
+									:id="'question-checkbox-' + index"
 									type="checkbox"
 									class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+									:value="question.id"
+									v-model="exportId"
 								/>
 								<label
 									for="checkbox-table-search-1"
@@ -118,11 +121,29 @@
 			</table>
 		</div>
 	</PageWrapper>
+	<ExportPaperModal
+		:is-open="isExportModalOpen"
+		@close-modal="hideExportModal"
+		:extractId="exportId"
+	/>
 </template>
 <script setup>
 import PageWrapper from "../../shared/PageWrapper.vue";
 import { initDropdowns } from "flowbite";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import ExportPaperModal from "../../dashboard/ExportPaperModal.vue";
+
+let exportId = ref([]);
+const isExportModalOpen = ref(false);
+
+const showExportModal = () => {
+	isExportModalOpen.value = true;
+};
+
+const hideExportModal = () => {
+	console.log('trigger: ');
+	isExportModalOpen.value = false;
+};
 
 const mockQuestionBank = [
 	{
