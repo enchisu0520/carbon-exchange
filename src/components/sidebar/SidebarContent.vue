@@ -4,12 +4,6 @@
 		aria-label="main"
 		class="relative flex flex-col flex-1 max-h-full gap-4 px-3"
 	>
-		<!-- <SidebarLink
-            title="Dashboard"
-            :to="{ name: 'Dashboard' }"
-            :active="isCurrentRoute('Dashboard')"
-            icon="mdi:view-dashboard"
-        /> -->
 		<button
 			class="p-2 flex items-center gap-2 rounded-md transition-colors text-gray-500 hover:text-gray-700 hover:bg-gray-100 dark:hover:text-gray-300 dark:hover:bg-dark-eval-2"
 			@click="showDashboardSettingModal"
@@ -25,8 +19,14 @@
 				>偏好設定</span
 			>
 		</button>
+        <SidebarLink
+            title="底稿權限管理"
+            :to="{ name: 'Permission' }"
+            :active="isCurrentRoute('Permission')"
+            icon="icon-park-outline:permissions"
+        />
         <SidebarCollapsible
-			icon="mdi:note-outline"
+			icon="clarity:list-line"
 			title="查核題庫"
 			:active="isCurrentPath('/bank')"
 		>
@@ -47,11 +47,11 @@
             />
 		</SidebarCollapsible>
 		<SidebarCollapsible
-			icon="mdi:note-outline"
-			title="查核底稿"
+			icon="icon-park-outline:data-sheet"
+			title="個人工作底稿"
 			:active="isCurrentPath('/paper')"
 		>
-			<SidebarCollapsibleItem
+			<!-- <SidebarCollapsibleItem
                 :to="{ name: 'FinancialPaper' }"
                 title="財務"
                 :active="isCurrentRoute('/paper/finance')"
@@ -60,7 +60,7 @@
                 :to="{ name: 'InternalAuditPaper' }"
                 title="內控內稽"
                 :active="isCurrentRoute('/paper/internal-autdit')"
-            />
+            /> -->
             <SidebarCollapsibleItem
                 :to="{ name: 'InformationSecurityPaper' }"
                 title="資訊安全"
