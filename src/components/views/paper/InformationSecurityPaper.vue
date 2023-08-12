@@ -98,22 +98,27 @@
 						<th scope="col" class="px-6 py-3 text-sm">類別</th>
 						<th scope="col" class="px-6 py-3 text-sm">項目</th>
 						<th scope="col" class="px-6 py-3 text-sm">子項目</th>
-						<th scope="col" class="w-20 px-3 py-3 text-sm">
+						<th scope="col" class="w-12 px-3 py-3 text-sm">
 							扣分等級
 						</th>
 						<th scope="col" class="px-6 py-3 text-sm">抽查範圍</th>
-						<th scope="col" class="w-20 px-3 py-3 text-sm">
+						<th scope="col" class="w-12 px-3 py-3 text-sm">
 							是否違反
 						</th>
 						<th scope="col" class="px-6 py-3 text-sm">查核說明</th>
-						<th scope="col" class="px-3 py-3 text-sm">底稿索引</th>
+						<th scope="col" class="w-20 px-3 py-3 text-sm">
+							底稿索引
+						</th>
+						<th scope="col" class="w-36 px-3 py-3 text-sm">
+							查核人
+						</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr
 						class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
 						:key="index"
-        				v-for="(question, index) in tableData"
+						v-for="(question, index) in tableData"
 					>
 						<td
 							scope="row"
@@ -155,6 +160,18 @@
 								class="block p-2.5 h-16 w-[3vw] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 							></textarea>
 						</td>
+						<td class="px-6 py-4">
+							<select
+								id="countries"
+								:disabled="true"
+								class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+							>
+								<option selected>{{ question.assignedId }}</option>
+								<option v-show="question.assignedId!='江孟涵'" value="江孟涵">江孟涵</option>
+								<option v-show="question.assignedId!='林洪均'" value="林洪均">林洪均</option>
+								<option v-show="question.assignedId!='劉保均'" value="劉保均">劉保均</option>
+							</select>
+						</td>
 					</tr>
 				</tbody>
 			</table>
@@ -175,7 +192,7 @@ const changeFilterPaper = (paperType) => {
 
 onMounted(() => {
 	initDropdowns();
-	tableData.value = mockData350
+	tableData.value = mockData350;
 });
 
 watch(
@@ -183,9 +200,9 @@ watch(
 	(newPaper) => {
 		if (newPaper == "GA-350") {
 			tableData.value = mockData350;
-		} else if(newPaper == "GA-350-1"){
+		} else if (newPaper == "GA-350-1") {
 			tableData.value = mockData3501;
-		} else if(newPaper == "Co-Location"){
+		} else if (newPaper == "Co-Location") {
 			tableData.value = mockDataCoLo;
 		}
 	}
@@ -204,6 +221,7 @@ const mockData350 = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "江孟涵"
 	},
 	{
 		catgory: "壹、資通安全(全體證券商適用)",
@@ -217,6 +235,7 @@ const mockData350 = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "林洪均"
 	},
 	{
 		catgory: "壹、資通安全(全體證券商適用)",
@@ -230,9 +249,9 @@ const mockData350 = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "劉保均"
 	},
 ];
-
 
 const mockData3501 = [
 	{
@@ -247,6 +266,7 @@ const mockData3501 = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "江孟涵"
 	},
 	{
 		catgory: "壹、資通安全(全體證券商適用)",
@@ -260,6 +280,7 @@ const mockData3501 = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "林洪均"
 	},
 	{
 		catgory: "壹、資通安全(全體證券商適用)",
@@ -273,6 +294,7 @@ const mockData3501 = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "劉保均"
 	},
 	{
 		catgory: "壹、資通安全(全體證券商適用)",
@@ -286,6 +308,7 @@ const mockData3501 = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "劉保均"
 	},
 ];
 
@@ -302,6 +325,7 @@ const mockDataCoLo = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "江孟涵"
 	},
 	{
 		catgory: "一、資通安全",
@@ -315,6 +339,7 @@ const mockDataCoLo = [
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "林洪均"
 	},
 	{
 		catgory: "一、資通安全",
@@ -323,11 +348,11 @@ const mockDataCoLo = [
 		subitem:
 			"(1)是否保留客戶委託買賣單進出Co-Lo主機之時間紀錄檔? (2)是否符合CA-11210受託買賣及成交作業規範完整保留委託紀錄?",
 		level: "E",
-		coverage:
-			"抽查委託單紀錄是否完整(如委託時間、帳號等)",
+		coverage: "抽查委託單紀錄是否完整(如委託時間、帳號等)",
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "劉保均"
 	},
 	{
 		catgory: "一、資通安全",
@@ -336,11 +361,11 @@ const mockDataCoLo = [
 		subitem:
 			"(1)是否保留客戶委託買賣單進出Co-Lo主機之時間紀錄檔? (2)是否符合CA-11210受託買賣及成交作業規範完整保留委託紀錄?",
 		level: "E",
-		coverage:
-			"1.調閱主機共置設備書面維護契約 2.調閱維護紀錄",
+		coverage: "1.調閱主機共置設備書面維護契約 2.調閱維護紀錄",
 		violation: false,
 		description: "",
 		appendix: "",
+		assignedId: "劉保均"
 	},
 ];
 </script>
