@@ -2,6 +2,7 @@
     <div class="min-h-screen text-gray-900 bg-gray-100 dark:bg-dark-bg dark:text-gray-100">
         <Sidebar 
             :showDashboardSettingModal="showDashboardSettingModal"
+            :isDashboardSettingModalOpen="isDashboardSettingModalOpen"
         />
         <div
             style="transition-property: margin; transition-duration: 150ms"

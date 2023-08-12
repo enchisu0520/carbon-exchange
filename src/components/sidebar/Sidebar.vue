@@ -34,6 +34,7 @@
         <SidebarHeader />
         <SidebarContent 
             :showDashboardSettingModal="showDashboardSettingModal"
+            :isDashboardSettingModalOpen="isDashboardSettingModalOpen"
         />
         <SidebarFooter />
     </aside>
@@ -48,6 +49,10 @@ import SidebarFooter from './SidebarFooter.vue'
 const props = defineProps({
     showDashboardSettingModal: {
         type: Function,
+        required: true
+    },
+    isDashboardSettingModalOpen: {
+        type: Boolean,
         required: true
     },
 })
