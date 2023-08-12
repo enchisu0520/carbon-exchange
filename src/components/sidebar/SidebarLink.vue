@@ -21,6 +21,31 @@
         >
     </a>
     <router-link
+        v-else-if="imgSrc && to"
+        :to="to"
+        :class="[
+            'p-2 flex items-center gap-2 rounded-md transition-colors',
+            {
+                'text-gray-400 hover:text-gray-700 hover:bg-gray-100 dark:hover:text-gray-300 dark:hover:bg-dark-eval-2':
+                    !active,
+                'text-white bg-purple-500 shadow-lg hover:bg-purple-600':
+                    active,
+            },
+        ]"
+    >
+        <img
+            :src="`img/${imgSrc}.png`"
+            class="h-10 w-10 object-cover transition-opacity group-hover:opacity-50"
+        />
+
+        <span
+            class="text-base font-medium"
+            v-show="sidebarState.isOpen || sidebarState.isHovered"
+        >
+            {{ title }}
+        </span>
+    </router-link>
+    <router-link
         v-else-if="to"
         :to="to"
         :class="[
@@ -71,6 +96,10 @@ import { Icon } from '@iconify/vue'
 
 defineProps({
     href: {
+        type: String,
+        required: false,
+    },
+    imgSrc: {
         type: String,
         required: false,
     },

@@ -1,11 +1,16 @@
 <template>
     <div class="flex items-center justify-between flex-shrink-0 px-3">
-        <router-link
+        <!-- <router-link
             to="/dashboard"
             class="inline-flex items-center gap-2"
         >
             <span class="text-lg font-bold">Simple Auditing</span>
-        </router-link>
+        </router-link> -->
+        <SidebarLink
+            title="Simple Auditing"
+            :to="{ name: 'Dashboard' }"
+            imgSrc="simple-auditing-icon"
+        />
         <Button
             icon-only
             variant="secondary"
@@ -40,4 +45,5 @@
 import Button from '../shared/Button.vue'
 import { Icon } from '@iconify/vue'
 import { sidebarState } from '../composables'
+import SidebarLink from "./SidebarLink.vue";
 </script>
