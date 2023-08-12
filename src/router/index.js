@@ -5,6 +5,7 @@ import ClassSearch from "../components/views/ClassSearch.vue";
 import CommonLayout from "../components/layouts/CommonLayout.vue";
 import DashboardLayout from "../components/layouts/DashboardLayout.vue";
 import Dashboard from "../components/views/Dashboard.vue";
+import Permission from "../components/views/Permission.vue";
 import FinancialPaper from "../components/views/paper/FinancialPaper.vue";
 import InternalAuditPaper from "../components/views/paper/InternalAuditPaper.vue";
 import InformationSecurityPaper from "../components/views/paper/InformationSecurityPaper.vue";
@@ -37,6 +38,11 @@ const routes = [
 				path: '/dashboard',
 				name: 'Dashboard',
 				component: Dashboard,
+			},
+			{
+				path: '/permission',
+				name: 'Permission',
+				component: Permission,
 			},
 			{
 				path: '/paper/finance',
