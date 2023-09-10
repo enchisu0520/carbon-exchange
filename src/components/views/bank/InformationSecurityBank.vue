@@ -148,42 +148,42 @@ const hideExportModal = () => {
 const mockQuestionBank = [
 	{
 		id: "10001",
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "CC-11000 風險評鑑與管理",
-		item: "1-1.檢視證券商資訊安全風險評鑑辦理情形：(適用網際網路下單之證券商)",
+		catgory: "壹、資訊安全",
+		type: "CC-11000",
+		item: "1-1. Lorem ipsum dolor sit amet",
 		subitem:
-			"(1) 是否至少每年辦理資訊安全風險評鑑乙次？ (2) 是否留存執行資訊安全風險評鑑相關紀錄？",
+			"(1) Aenean urna quam (2) Nam at tortor eu diam feugiat laoreet",
 		level: "E",
 		coverage:
-			"1.受查期間資訊安全風險評鑑報告及風險改善計劃(建議涵蓋重要外部議題) 2.決定可接受風險等級及核准紀錄(日期: 年 月 日)",
+			"Nulla fringilla purus ac lectus feugiat, et euismod dolor ultricies. Ut posuere consectetur arcu eget rhoncus.",
 		violation: false,
 		description: "",
 		appendix: "",
 	},
 	{
 		id: "10002",
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "CC-12000 資訊安全政策",
-		item: "2-1. 檢視證券商資安政策：",
+		catgory: "壹、資訊安全",
+		type: "CC-12000",
+		item: "2-1. Etiam venenatis lobortis lacinia",
 		subitem:
-			"(1) 資安政策是否每年至少評估乙次？ (2)資安政策修訂後是否發布給員工？",
+			"(1) Phasellus lobortis risus et sagittis pellentesque (2)Sed vehicula",
 		level: "D",
 		coverage:
-			"1-1.最新公告之資訊安全政策 1-2.資訊安全政策修訂評估簽或會議紀錄(評估日期: 年 月	日) 2.資訊安全政策公告及通知員工遵行之紀錄",
+			"Donec eu luctus arcu.Praesent magna tellus, cursus eget nulla quis, convallis dignissim orci",
 		violation: false,
 		description: "",
 		appendix: "",
 	},
 	{
 		id: "10003",
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "CC-12000 資訊安全政策",
-		item: "2-2. 檢視證券商資安事件、個資事件通報暨處理：",
+		catgory: "壹、資訊安全",
+		type: "CC-13000",
+		item: "2-2. Maecenas a gravida est",
 		subitem:
-			"(1)是否建立資訊安全事件、個資事件通報暨處理作業程序？ (2)檢視公司是否發生客戶個人資料之竊取、竄改、毀損、滅失、或洩漏等資安事故，嚴重影響市場交易安全情形。",
+			"(1)Vestibulum hendrerit diam mi (2) Nulla molestie neque dictum iaculis facilisis",
 		level: "A",
 		coverage:
-			"1. 資訊安全事件通報暨處理程序 2. 個資事件通報暨處理程序 3. 抽調受查期間資安事件及個資事件通報暨處理紀錄(含證券期貨市場資通安全通報紀錄)",
+			"Nunc nec odio lacinia, elementum urna sed, tincidunt nisi. Nulla sit amet tempor mi, ac fringilla sapien.",
 		violation: false,
 		description: "",
 		appendix: "",

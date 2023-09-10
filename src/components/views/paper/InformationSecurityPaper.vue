@@ -207,165 +207,136 @@ watch(
 		}
 	}
 );
-
 const mockData350 = [
 	{
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "CC-11000 風險評鑑與管理",
-		item: "1-1.檢視證券商資訊安全風險評鑑辦理情形：(適用網際網路下單之證券商)",
+		catgory: "壹、資訊硬體安全",
+		type: "CC-11000",
+		item: "1-1. Lorem ipsum dolor sit amet",
 		subitem:
-			"(1) 是否至少每年辦理資訊安全風險評鑑乙次？ (2) 是否留存執行資訊安全風險評鑑相關紀錄？",
+			"(1) Aenean urna quam (2) Nam at tortor eu diam feugiat laoreet",
 		level: "E",
 		coverage:
-			"1.受查期間資訊安全風險評鑑報告及風險改善計劃(建議涵蓋重要外部議題) 2.決定可接受風險等級及核准紀錄(日期: 年 月 日)",
+			"Nulla fringilla purus ac lectus feugiat, et euismod dolor ultricies. Ut posuere consectetur arcu eget rhoncus.",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "江孟涵"
+		assignedId: "Paul"
 	},
 	{
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "CC-12000 資訊安全政策",
-		item: "2-1. 檢視證券商資安政策：",
+		catgory: "壹、資訊硬體安全",
+		type: "CC-12000",
+		item: "2-1. Etiam venenatis lobortis lacinia",
 		subitem:
-			"(1) 資安政策是否每年至少評估乙次？ (2)資安政策修訂後是否發布給員工？",
+			"(1) Phasellus lobortis risus et sagittis pellentesque (2)Sed vehicula",
 		level: "D",
 		coverage:
-			"1-1.最新公告之資訊安全政策 1-2.資訊安全政策修訂評估簽或會議紀錄(評估日期: 年 月	日) 2.資訊安全政策公告及通知員工遵行之紀錄",
+			"Donec eu luctus arcu.Praesent magna tellus, cursus eget nulla quis, convallis dignissim orci",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "林洪均"
+		assignedId: "John"
 	},
 	{
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "CC-12000 資訊安全政策",
-		item: "2-2. 檢視證券商資安事件、個資事件通報暨處理：",
+		catgory: "壹、資訊硬體安全",
+		type: "CC-13000",
+		item: "2-2. Maecenas a gravida est",
 		subitem:
-			"(1)是否建立資訊安全事件、個資事件通報暨處理作業程序？ (2)檢視公司是否發生客戶個人資料之竊取、竄改、毀損、滅失、或洩漏等資安事故，嚴重影響市場交易安全情形。",
+			"(1)Vestibulum hendrerit diam mi (2) Nulla molestie neque dictum iaculis facilisis",
 		level: "A",
 		coverage:
-			"1. 資訊安全事件通報暨處理程序 2. 個資事件通報暨處理程序 3. 抽調受查期間資安事件及個資事件通報暨處理紀錄(含證券期貨市場資通安全通報紀錄)",
+			"Nunc nec odio lacinia, elementum urna sed, tincidunt nisi. Nulla sit amet tempor mi, ac fringilla sapien.",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "劉保均"
+		assignedId: "Mary"
 	},
 ];
-
 const mockData3501 = [
 	{
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "行情傳輸主機資安防護情形",
-		item: "一、作業系統帳號管理(8-1)：",
+		catgory: "貳、資訊軟體安全",
+		type: "CD-11000",
+		item: "1-1. Lorem ipsum dolor sit amet",
 		subitem:
-			"1.是否定期清查帳號或檢視帳號異常使用情形? 2.是否訂定最高權限帳號管理辦法? 3.是否對最高權限帳號進行控管並留存相關紀錄？是否依規定設定作業系統參數?(如:優質密碼、密碼長度、密碼變更期間……)",
+			"(1) Aenean urna quam (2) Nam at tortor eu diam feugiat laoreet",
 		level: "E",
 		coverage:
-			"1. 調閱該公司最高權限帳號管理規範 2. 另隨機抽核最高權限使用情形是否符合規定 3. 受查期間資訊系統最高權限及特殊權限盤點清單 4. 調閱作業系統參數",
+			"Nulla fringilla purus ac lectus feugiat, et euismod dolor ultricies. Ut posuere consectetur arcu eget rhoncus.",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "江孟涵"
+		assignedId: "Paul"
 	},
 	{
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "行情傳輸主機資安防護情形",
-		item: "二、遠端連線安全管控(7-3)：",
+		catgory: "貳、資訊軟體安全",
+		type: "CD-12000",
+		item: "2-1. Etiam venenatis lobortis lacinia",
 		subitem:
-			"1.是否對使用外部網路遠端連線至公司內部(如廠商維護及居家辦公)作業進行控管，留存紀錄並由權責主管定期覆核? 2.公司透過網際網路登入系統，是否採用多因子認證機制?(112年6月底生效)是否透過安全連線機制進行遠端連線?",
-		level: "E",
-		coverage:
-			"1.調閱遠端連線作業管控程序 2.調閱受查期間外部網路遠端連線帳號申請單、帳號清單及帳號權限定期覆核紀錄 3.調閱受查期間外部網路遠端連線至公司紀錄及權責主管覆核紀錄 4.調閱透過網際網路，登入系統之登入方式說明及多因子認證設定畫面(如TOKEN、OTP) 5.調閱遠端連線機制說明，點對點之連線方式",
-		violation: false,
-		description: "",
-		appendix: "",
-		assignedId: "林洪均"
-	},
-	{
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "行情傳輸主機資安防護情形",
-		item: "三、檢視公司對防範撞庫攻擊之執行是否確實(13-2)？",
-		subitem:
-			"1.公司是否每日針對核心系統之帳號登入失敗紀錄、非客戶帳號嘗試登入紀錄等進行監控及分析，即時了解異常原因，並留存相關紀錄? 2.公司是否對於嘗試登入帳號之異常及不明來源IP有警示機制，進行監控分析及留存紀錄，並定期檢視以確認機制有效運作?",
+			"(1) Phasellus lobortis risus et sagittis pellentesque (2)Sed vehicula",
 		level: "D",
 		coverage:
-			"抽查網路下單系統或核心系統有無定期檢視異常情形 1.檢核內容至少包含帳號登入失敗紀錄及非客戶帳號登入嘗試紀錄，確認監控異常條件 2.調閱不明來源IP異常登入之定期監控及警示紀錄",
+			"Donec eu luctus arcu.Praesent magna tellus, cursus eget nulla quis, convallis dignissim orci",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "劉保均"
+		assignedId: "John"
 	},
 	{
-		catgory: "壹、資通安全(全體證券商適用)",
-		type: "行情傳輸主機資安防護情形",
-		item: "四、檢視證券商網路區隔(7-1)：",
+		catgory: "貳、資訊軟體安全",
+		type: "CD-13000",
+		item: "2-2. Maecenas a gravida est",
 		subitem:
-			"1.公司網路是否依用途區分為DMZ、營運環境、測試環境及其他環境，並有適當區隔機制(如防火牆、虛擬區域網路、實體隔離等)? 2.重要網站、伺服器系統(如網路下單系統等) 及內部網路是否以防火牆與外部網際網路隔離?",
-		level: "E",
+			"(1)Vestibulum hendrerit diam mi (2) Nulla molestie neque dictum iaculis facilisis",
+		level: "A",
 		coverage:
-			"1-1.請提供網路架構圖，說明是否有網路區隔機制，檢視存放個人資料資料庫的網域 1-2.IP網段配置表(應含公司所有網段並註明各網段用途) 1-3.伺服器主機IP清單 2-1.請證券商提供網路架構圖，說明是否符合、建議相關防火牆設定非為any any",
+			"Nunc nec odio lacinia, elementum urna sed, tincidunt nisi. Nulla sit amet tempor mi, ac fringilla sapien.",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "劉保均"
+		assignedId: "Mary"
 	},
 ];
-
 const mockDataCoLo = [
 	{
-		catgory: "一、資通安全",
-		type: "(一)檢視主機共置機房設備清單作業(CC-17010網路安全管理、CC-19000系統開發及維護、主機共置（Co–Location）服務管理辦法第四條)",
-		item: "檢視證券商「主機共置用戶服務系統」之設備清單是否與財產清冊相符及具有資產取得或使用憑證：",
+		catgory: "參、個資安全",
+		type: "CE-11000",
+		item: "1-1. Lorem ipsum dolor sit amet",
 		subitem:
-			"1.核對證券商之軟硬體設備資產清冊，其種類、數量是否相符? 2.軟硬體設備所有權人是否歸屬於該公司，如係租用，是否訂有契約或相關證明文件? 3.Co-Lo機房之設備不得使用危害國家資通安全產品。",
+			"(1) Aenean urna quam (2) Nam at tortor eu diam feugiat laoreet",
+		level: "E",
+		coverage:
+			"Nulla fringilla purus ac lectus feugiat, et euismod dolor ultricies. Ut posuere consectetur arcu eget rhoncus.",
+		violation: false,
+		description: "",
+		appendix: "",
+		assignedId: "Paul"
+	},
+	{
+		catgory: "參、個資安全",
+		type: "CE-12000",
+		item: "2-1. Etiam venenatis lobortis lacinia",
+		subitem:
+			"(1) Phasellus lobortis risus et sagittis pellentesque (2)Sed vehicula",
 		level: "D",
 		coverage:
-			"1.列印本公司「主機共置用戶服務系統」之證券商設備清單，調閱證券商置放於Co-Lo之軟硬體設備清單及相關硬體設備型號、序號及廠牌等資訊明細表，與主機共置用戶服務系統之證券商設備清單比對是否相符。 2.調閱證券商之資產取得證明、租賃契約及相關費用收據、維護合約。 3.檢視證券商置放於Co-Lo之軟硬體設備清單，確認是否有危害國家資通安全產品。",
+			"Donec eu luctus arcu.Praesent magna tellus, cursus eget nulla quis, convallis dignissim orci",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "江孟涵"
+		assignedId: "John"
 	},
 	{
-		catgory: "一、資通安全",
-		type: "(二)CC-17010網路安全管理",
-		item: "檢視Co-Lo防火牆設備是否符合規定?",
+		catgory: "參、個資安全",
+		type: "CE-13000",
+		item: "2-2. Maecenas a gravida est",
 		subitem:
-			"1.是否建立防火牆? 2.Co-Lo防火牆之進出紀錄及其備份是否保存三年? 3.是否每年定期檢視並維護防火牆存取控管設定，並留存相關檢視紀錄？",
-		level: "C",
+			"(1)Vestibulum hendrerit diam mi (2) Nulla molestie neque dictum iaculis facilisis",
+		level: "A",
 		coverage:
-			"1.調閱網路架構圖 2.調閱IP網段配置表 3.調閱防火牆之紀錄及備份保存情形 4.調閱每年檢視防火牆存取控管設定之相關紀錄",
+			"Nunc nec odio lacinia, elementum urna sed, tincidunt nisi. Nulla sit amet tempor mi, ac fringilla sapien.",
 		violation: false,
 		description: "",
 		appendix: "",
-		assignedId: "林洪均"
-	},
-	{
-		catgory: "一、資通安全",
-		type: "(三)CC-17020電腦系統及作業安全管理、CA-11210受託買賣及成交作業規範",
-		item: "3-1.檢視客戶委託買賣單進出Co-Lo主機之時間紀錄檔：(自營不適用)",
-		subitem:
-			"(1)是否保留客戶委託買賣單進出Co-Lo主機之時間紀錄檔? (2)是否符合CA-11210受託買賣及成交作業規範完整保留委託紀錄?",
-		level: "E",
-		coverage: "抽查委託單紀錄是否完整(如委託時間、帳號等)",
-		violation: false,
-		description: "",
-		appendix: "",
-		assignedId: "劉保均"
-	},
-	{
-		catgory: "一、資通安全",
-		type: "(三)CC-17020電腦系統及作業安全管理、CA-11210受託買賣及成交作業規範",
-		item: "3-2.檢視Co-Lo設備維護是否符合規定?(自行維護不適用)",
-		subitem:
-			"(1)是否保留客戶委託買賣單進出Co-Lo主機之時間紀錄檔? (2)是否符合CA-11210受託買賣及成交作業規範完整保留委託紀錄?",
-		level: "E",
-		coverage: "1.調閱主機共置設備書面維護契約 2.調閱維護紀錄",
-		violation: false,
-		description: "",
-		appendix: "",
-		assignedId: "劉保均"
+		assignedId: "Mary"
 	},
 ];
 </script>
